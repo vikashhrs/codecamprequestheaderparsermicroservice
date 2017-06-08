@@ -8,7 +8,7 @@ app.get('/',function(req,res){
 	res.status(200).send({
         ipaddress : req.connection.remoteAddress,
         language : req.headers.language,
-        software : req.headers.host
+        software : req.headers['user-agent']
     })
 })
 
