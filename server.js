@@ -7,7 +7,7 @@ var PORT = process.env.PORT || 3000;
 app.get('/',function(req,res){
 	res.status(200).send({
         ipaddress : req.connection.remoteAddress,
-        language : req.headers.language,
+        language : req.headers['accept-language'],
         software : req.headers['user-agent']
     })
 })
